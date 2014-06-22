@@ -60,11 +60,11 @@
     <nav class="navdrawer-container promote-layer">
       <h4>Navigation</h4>
       <ul>
-        <li><a href="#hello">DevOps Power Tools</a></li>
-        <li><a href="#get-started">Puppet</a></li>
-        <li><a href="#get-started">Chef</a></li>
-        <li><a href="#get-started">SaltStack</a></li>
-        <li><a href="#get-started">Ansible</a></li>
+        <li><a href="http://googlecloudplatform.github.io/compute-video-demo-main/">DevOps Power Tools</a></li>
+        <li><a href="http://googlecloudplatform.github.io/compute-video-demo-puppet/">Puppet</a></li>
+        <li><a href="http://googlecloudplatform.github.io/compute-video-demo-chef/">Chef</a></li>
+        <li><a href="http://googlecloudplatform.github.io/compute-video-demo-salt/">SaltStack</a></li>
+        <li><a href="http://googlecloudplatform.github.io/compute-video-demo-ansible/">Ansible</a></li>
       </ul>
     </nav>
 
@@ -99,14 +99,12 @@
       <hr />
 
       <div class="g-medium--full g-wide--full">
-        <div class="container">
-          <h3>Example: Install Apache</h3>
-          <div class="code-sample">
-            <div class="highlight-module highlight-module--code highlight-module--right">
-              <div class="highlight-module__container">
-                <code class="html">
-                  <div class="highlight">
-                    <pre> 1 apt_package "apache" do
+        <h3>Example: Install Apache</h3>
+        <div class="highlight-module highlight-module--code highlight-module--right">
+          <div class="highlight-module__container">
+            <code class="ruby">
+              <div class="highlight">
+                <pre> 1 apt_package "apache" do
  2   action :install
  3 end
  4
@@ -119,11 +117,9 @@
 11   action :create
 12   mode "644"
 13 end
-                    </pre>
-                  </div>
-                </code>
+                </pre>
               </div>
-            </div>
+            </code>
           </div>
         </div>
       </div>
@@ -131,14 +127,12 @@
       <hr />
 
       <div class="g-medium--full g-wide--full">
-        <div class="container">
-          <h3>Example: Create a Compute Engine instance</h3>
-          <div class="code-sample">
-            <div class="highlight-module highlight-module--code highlight-module--right">
-              <div class="highlight-module__container">
-                <code class="html">
-                  <div class="highlight">
-                    <pre> 1    gce_instance "gce-chef" do
+        <h3>Example: Create a Compute Engine instance</h3>
+        <div class="highlight-module highlight-module--code highlight-module--right">
+          <div class="highlight-module__container">
+            <code class="ruby">
+              <div class="highlight">
+                <pre> 1    gce_instance "gce-chef" do
  2      machine_type "n1-standard-1"
  3      boot_disk_image "debian-7-wheezy-v20140606"
  4      tags ["DevOps", "Google", "Chef"]
@@ -151,14 +145,14 @@
 11      validation_pem "/etc/chef/validation.pem"
 12      action :create
 13    end
-                    </pre>
-                  </div>
-                </code>
+                </pre>
               </div>
-            </div>
+            </code>
           </div>
         </div>
       </div>
+      <br />
+      <a href="styleguide/index.html">Style Guide</a>
     </main>
 
     <!-- build:js scripts/main.min.js -->
