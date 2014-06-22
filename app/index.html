@@ -2,10 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-    <title>Web Starter Kit</title>
+    <title>DevOps::Chef</title>
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -15,26 +14,26 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
 
-    <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
-    <meta name="msapplication-TileColor" content="#3372DF">
-
     <!-- iOS icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/touch/apple-touch-icon-144x144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/touch/apple-touch-icon-114x114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/touch/apple-touch-icon-72x72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/touch/apple-touch-icon-57x57-precomposed.png">
 
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
     <!-- Generic Icon -->
     <link rel="shortcut icon" href="images/touch/touch-icon-57x57.png">
-
-    <!-- Chrome Add to Homescreen -->
-    <link rel="shortcut icon" sizes="196x196" href="images/touch/touch-icon-196x196.png">
 
     <!-- SEO: If mobile URL is different from desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
     <!--
     <link rel="canonical" href="http://www.example.com/">
     -->
+
+    <!-- Chrome Add to Homescreen -->
+    <link rel="shortcut icon" sizes="196x196" href="images/touch/touch-icon-196x196.png">
 
     <!-- build:css styles/components/main.min.css -->
     <link rel="stylesheet" href="styles/h5bp.css">
@@ -46,7 +45,12 @@
     <header class="app-bar promote-layer">
       <div class="app-bar-container">
         <button class="menu"><img src="images/hamburger.svg" alt="menu"></button>
-        <h1 class="logo">Web Starter Kit</h1>
+        <div class="g-medium-full">
+          <p class="logo">
+            <img height="60" style="max-width:auto;" src="images/gcp.png" />
+            DevOps::Chef
+          </p>
+        </div>
         <section class="app-bar-actions">
         <!-- Put App Bar Buttons Here -->
         </section>
@@ -56,33 +60,110 @@
     <nav class="navdrawer-container promote-layer">
       <h4>Navigation</h4>
       <ul>
-        <li><a href="#hello">Hello</a></li>
-        <li><a href="#get-started">Get Started</a></li>
-        <li><a href="styleguide/index.html">Style Guide</a></li>
+        <li><a href="#hello">DevOps Power Tools</a></li>
+        <li><a href="#get-started">Puppet</a></li>
+        <li><a href="#get-started">Chef</a></li>
+        <li><a href="#get-started">SaltStack</a></li>
+        <li><a href="#get-started">Ansible</a></li>
       </ul>
     </nav>
 
     <main>
-      <h1 id="hello">Hello!</h1>
-      <p>Welcome to Web Starter Kit.</p>
+      <br />
+      <div class="g-medium--full g-wide--full">
+        <div class="g-wide--1 g-medium--half">
+          <img height="100" style="max-width:auto;" src="images/chef.jpg" />
+          <ul class="list-links list-links--primary">
+            <li class="list__item"><a href="http://docs.opscode.com/">Documentation</a>
+            <li class="list__item"><a href="http://getchef.com/enterprise-chef">Enterprise Chef</a>
+          </ul>
+          <h3>Google+Chef</h3>
+          <ul class="list-links list-links--primary">
+            <li class="list__item"><a href="http://docs.opscode.com/plugin_knife_google.html">knife-google</a>
+            <li class="list__item"><a href="http://community.opscode.com/cookbooks/gce">GCE LWRP</a>
+            <li class="list__item"><a href="http://community.opscode.com/cookbooks/gcs">GCS LWRP</a>
+          </ul>
+          <h3>Demos</h3>
+          <ul class="list-links list-links--primary">
+            <li class="list__item"><a href="https://www.youtube.com/watch?v=D2OICR18zIo">Demo Video</a>
+            <li class="list__item"><a href="https://github.com/GoogleCloudPlatform/compute-video-demo-chef">Demo Code</a>
+          </ul>
+          <br />
+        </div>
+        <div class="g-wide--3 g-wide--last g-medium--half g--last">
+          <p class="medium">Demo: Chef and Google Compute Engine</p>
+          <script type="text/javascript" src="https://asciinema.org/a/10332.js" id="asciicast-10332" async data-autoplay="1"></script>
+        </div>
+      </div>
 
-      <h2 id="get-started">Get Started.</h2>
-      <p>Read how to <a href="http://developers.google.com/web/starter-kit">Get Started</a> or check out the <a href="styleguide/index.html">Style Guide</a>.</p>
+      <hr />
+
+      <div class="g-medium--full g-wide--full">
+        <div class="container">
+          <h3>Example: Install Apache</h3>
+          <div class="code-sample">
+            <div class="highlight-module highlight-module--code highlight-module--right">
+              <div class="highlight-module__container">
+                <code class="html">
+                  <div class="highlight">
+                    <pre> 1 apt_package "apache" do
+ 2   action :install
+ 3 end
+ 4
+ 5 service "apache" do
+ 6  action [:enable, :start]
+ 7 end
+ 8
+ 9 template "/var/www/index.html" do
+10   source "index.html.erb"
+11   action :create
+12   mode "644"
+13 end
+                    </pre>
+                  </div>
+                </code>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <hr />
+
+      <div class="g-medium--full g-wide--full">
+        <div class="container">
+          <h3>Example: Create a Compute Engine instance</h3>
+          <div class="code-sample">
+            <div class="highlight-module highlight-module--code highlight-module--right">
+              <div class="highlight-module__container">
+                <code class="html">
+                  <div class="highlight">
+                    <pre> 1    gce_instance "gce-chef" do
+ 2      machine_type "n1-standard-1"
+ 3      boot_disk_image "debian-7-wheezy-v20140606"
+ 4      tags ["DevOps", "Google", "Chef"]
+ 5      metadata "demo"=>"chef", "foo"=>"bar"
+ 6      auto_restart true
+ 7      on_host_maintenance "MIGRATE"
+ 8      wait_for false
+ 9      first_boot_json "/etc/chef/first_boot_json"
+10      client_rb "/etc/chef/client.rb"
+11      validation_pem "/etc/chef/validation.pem"
+12      action :create
+13    end
+                    </pre>
+                  </div>
+                </code>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <!-- build:js scripts/main.min.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='//www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
-    <!-- Built with love using Web Starter Kit -->
   </body>
 </html>
