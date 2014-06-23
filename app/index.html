@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-    <title>Web Starter Kit</title>
+    <title>DevOps::Power Tools</title>
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -45,7 +45,12 @@
     <header class="app-bar promote-layer">
       <div class="app-bar-container">
         <button class="menu"><img src="images/hamburger.svg" alt="menu"></button>
-        <h1 class="logo">Web Starter Kit</h1>
+        <div class="g-medium-full">
+          <p class="logo">
+            <img height="60" style="max-width:auto;" src="images/gcp.png" />
+            DevOps::Power Tools
+          </p>
+        </div>
         <section class="app-bar-actions">
         <!-- Put App Bar Buttons Here -->
         </section>
@@ -55,33 +60,118 @@
     <nav class="navdrawer-container promote-layer">
       <h4>Navigation</h4>
       <ul>
-        <li><a href="#hello">Hello</a></li>
-        <li><a href="#get-started">Get Started</a></li>
-        <li><a href="styleguide/index.html">Style Guide</a></li>
+        <li><a href="http://googlecloudplatform.github.io/compute-video-demo-main/">DevOps Power Tools</a></li>
+        <li><a href="http://googlecloudplatform.github.io/compute-video-demo-puppet/">Puppet</a></li>
+        <li><a href="http://googlecloudplatform.github.io/compute-video-demo-chef/">Chef</a></li>
+        <li><a href="http://googlecloudplatform.github.io/compute-video-demo-salt/">SaltStack</a></li>
+        <li><a href="http://googlecloudplatform.github.io/compute-video-demo-ansible/">Ansible</a></li>
       </ul>
     </nav>
 
     <main>
-      <h1 id="hello">Hello!</h1>
-      <p>Welcome to Web Starter Kit.</p>
+      <br />
+      <div class="g--half">
+        <br />&nbsp;
+        <img height="300" style="max-width:auto;" src="images/use-gce-large.png" />
+      </div>
+      <div class="g--half g--last">
+        <p class="xlarge">Configuration Management +<br />Google Compute Engine</p>
+        <ul class="list-links list-links--primary">
+          <li class="list__item"><a href="http://googlecloudplatform.github.io/compute-video-demo-puppet/">Puppet</a></li>
+          <li class="list__item"><a href="http://googlecloudplatform.github.io/compute-video-demo-chef/">Chef</a></li>
+          <li class="list__item"><a href="http://googlecloudplatform.github.io/compute-video-demo-salt/">SaltStack</a></li>
+          <li class="list__item"><a href="http://googlecloudplatform.github.io/compute-video-demo-ansible/">Ansible</a></li>
+        </ul>
+      </div>
 
-      <h2 id="get-started">Get Started.</h2>
-      <p>Read how to <a href="http://developers.google.com/web/starter-kit">Get Started</a> or check out the <a href="styleguide/index.html">Style Guide</a>.</p>
+      <div class="g-medium--full g-wide--full">
+        <br />
+      </div>
+
+      <div class="g-medium--full g-wide--full">
+        <section class="styleguide__guides-section">
+          <div class="guides-section">
+            <header class="container">
+              <h2 class="xxlarge">Configuration Management?</h2>
+              <p>You're a *developer*, right?<br />Then write code and stop manually configuring machines!</p>
+            </header>
+            <ul class="guides-list container-medium">
+              <li class="guides-list__item g--half theme--multi-device-layouts ">
+                <div class="primary-content">
+                  <h3 class="xlarge color--blue">No Snowflakes</h3>
+                  <p>Have you ever had to make a few little tweaks to your
+                  system to get it just right for your latest feature? Perhaps
+                  a new software package, or custom network service was required.
+                  Your "snowflake system" is perfect and now unique!  But when
+                  it comes time to deploy your feature, are you going to
+                  remember all those little tweaks?</p>
+                </div>
+                <div class="secondary-content">
+                  <span class="icon-circle themed--background"><i class="icon icon-star"></i></span>
+                  <ol class="list-links list-links--secondary">
+                    <li>Rule: Treat all systems the same</li>
+                    <li>Rule: No one-off configurations</li>
+                  </ol>
+                </div>
+              </li>
+              <li class="guides-list__item g--half theme--introduction-to-media g--last">
+                <div class="primary-content">
+                  <h3 class="xlarge color--green">Declarative</h3>
+                  <p>Learn how to describe the desired "state" of your systems
+                  and let a tool do all the actual work of making it conform
+                  to your specification. Get out of the habit of needing
+                  humans to execute manual steps on your systems.</p>
+                </div>
+                <div class="secondary-content">
+                  <span class="icon-circle themed--background"><i class="icon icon-exclamation"></i></span>
+                  <ol class="list-links list-links--secondary">
+                    <li>Rule: Describe desired system state</li>
+                    <li>Rule: No human intervention for configuration</li>
+                  </ol>
+                </div>
+              </li>
+              <li class="guides-list__item g--half theme--user-input ">
+                <div class="primary-content">
+                  <h3 class="xlarge color--red">Versioned</h3>
+                  <p>Treat your system configurations like your code and track
+                  changes in a version control system. Version or label your
+                  releases and ensure that you have a rollback plan to go the
+                  last known good state in case something goes wrong during
+                  a release.</p>
+                </div>
+                <div class="secondary-content">
+                  <span class="icon-circle themed--background"><i class="icon icon-hash"></i></span>
+                  <ol class="list-links list-links--secondary">
+                    <li>Rule: Treat system configs like code</li>
+                    <li>Rule: Use versions/labels for releases/rollbacks</li>
+                  </ol>
+                </div>
+              </li>
+              <li class="guides-list__item g--half theme--performance g--last">
+                <div class="primary-content">
+                  <h3 class="xlarge color--yellow">Peer Reviewed</h3>
+                  <p>Since you're treating your system configuration like code,
+                  make sure it is reviewed and tested by your peers before
+                  a release. Share the responsibility to ensure changes will
+                  not introduce regressions, bugs, or outages!</p>
+                </div>
+                <div class="secondary-content">
+                  <span class="icon-circle themed--background"><i class="icon icon-tick"></i></span>
+                  <ol class="list-links list-links--secondary">
+                    <li>Rule: Treat system changes like code changes</li>
+                    <li>Rule: No production release until reviewed</li>
+                  </ol>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
     </main>
 
     <!-- build:js scripts/main.min.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='//www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
-    <!-- Built with love using Web Starter Kit -->
   </body>
 </html>
